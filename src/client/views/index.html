@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="navbar">
+                <a href="#" class="logo">TraveLand</a>
+
+                <div class="navbar__links">
+                    <a href="#" class="navbar__link">Plan</a>
+                    <a href="#" class="navbar__link">My Plans</a>
+                </div>
+            </nav>
+
+            <div class="hero">
+                <div class="data">
+                    <form action="#">
+                        <label for="city" class="label">Which city are you going to travel?</label>
+                        <input type="text" class="input city" placeholder="New York">
+                        <label for="date" class="label">Date</label>
+                        <div class="date">
+                            <input type="text" class="input start" placeholder="Start-date" onfocus="(this.type = 'date')" onblur="(this.type = 'text')">
+                            <input type="text" class="input end" placeholder="End-date" onfocus="(this.type = 'date')" onblur="(this.type = 'text')">
+                        </div>
+                        <label for="notes" class="label">Notes</label>
+                        <textarea name="notes" class="textarea" id="note"></textarea>
+                        <input type="button" class="input add" value="Add To List">
+                    </form>
+                </div>
+                <h1 class="title">Make TRAVEL less stressful with us!</h1>
+            </div>
+
+        </header>
+
+        <main class="main">
+            <h1 class="main__title title">Your Plan Lists</h1>
+
+            <div class="main__travel">
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
