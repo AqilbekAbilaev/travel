@@ -10,10 +10,9 @@ app.use(express.static('dist'))
 
 app.use(json())
 
-// Cors Policy
 app.use(cors())
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, (req, res) => {
     console.log(`Running successfully on ${port}`)
 })
@@ -55,3 +54,7 @@ app.post('/getData', async (req, res) => {
     res.send(weatherData)
     weatherData.data.length = 0;
 })
+
+module.exports = {
+    weatherData
+}

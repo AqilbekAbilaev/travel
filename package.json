@@ -29,10 +29,14 @@
     "css-loader": "^6.5.1",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.5",
     "mini-css-extract-plugin": "^2.4.5",
     "node-sass": "^7.0.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
-    "webpack-dev-server": "^4.6.0"
+    "terser-webpack-plugin": "^5.3.0",
+    "webpack-dev-server": "^4.6.0",
+    "workbox-webpack-plugin": "^6.4.2"
   }
 }

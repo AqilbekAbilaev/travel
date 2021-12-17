@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-// const WorkboxPlugin = require('workbox-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -23,7 +23,7 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: [/node_modules/, /test/],
                 loader: "babel-loader"
             },
             {
@@ -50,8 +50,8 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         }),
-        // new WorkboxPlugin.GenerateSW(),
         new MiniCssExtractPlugin({ filename: 'style.css' }),
+        new WorkboxPlugin.GenerateSW()
         ],
     devServer: {
         static: {
