@@ -1,6 +1,6 @@
 function generateData(data) {
   console.log("sent");
-  const res = getData("http://localhost:3000/getData", {
+  const res = getData("/getData", {
     city: data.city,
     startDate: data.startDate,
     endDate: data.endDate,
